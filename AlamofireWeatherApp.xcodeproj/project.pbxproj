@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8405FEEB2657EB1600BE833C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FEEA2657EB1600BE833C /* AppDelegate.swift */; };
 		8405FEED2657EB1600BE833C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FEEC2657EB1600BE833C /* SceneDelegate.swift */; };
-		8405FEEF2657EB1600BE833C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FEEE2657EB1600BE833C /* ViewController.swift */; };
+		8405FEEF2657EB1600BE833C /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FEEE2657EB1600BE833C /* ChoiceViewController.swift */; };
 		8405FEF22657EB1600BE833C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8405FEF02657EB1600BE833C /* Main.storyboard */; };
 		8405FEF42657EB1900BE833C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8405FEF32657EB1900BE833C /* Assets.xcassets */; };
 		8405FEF72657EB1900BE833C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8405FEF52657EB1900BE833C /* LaunchScreen.storyboard */; };
@@ -17,6 +17,8 @@
 		8405FF0F2658348E00BE833C /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FF0E2658348E00BE833C /* Extension + UIViewController.swift */; };
 		8405FF122658432700BE833C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FF112658432700BE833C /* City.swift */; };
 		8405FF152658455100BE833C /* CityInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FF142658455100BE833C /* CityInitializer.swift */; };
+		8425A0E22658C3C0004B8E51 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425A0E12658C3C0004B8E51 /* Forecast.swift */; };
+		8425A0E52658C97D004B8E51 /* Extension + ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425A0E42658C97D004B8E51 /* Extension + ChoiceViewController.swift */; };
 		BDECBBF1337DCB3A170802FC /* Pods_AlamofireWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8285F17796BCAB8C6E1DA47C /* Pods_AlamofireWeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +29,7 @@
 		8405FEE72657EB1600BE833C /* AlamofireWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8405FEEA2657EB1600BE833C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8405FEEC2657EB1600BE833C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8405FEEE2657EB1600BE833C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8405FEEE2657EB1600BE833C /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		8405FEF12657EB1600BE833C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8405FEF32657EB1900BE833C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8405FEF62657EB1900BE833C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		8405FF0E2658348E00BE833C /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
 		8405FF112658432700BE833C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		8405FF142658455100BE833C /* CityInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInitializer.swift; sourceTree = "<group>"; };
+		8425A0E12658C3C0004B8E51 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		8425A0E42658C97D004B8E51 /* Extension + ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + ChoiceViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,9 +95,10 @@
 		8405FF0426582B1E00BE833C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8405FEEE2657EB1600BE833C /* ViewController.swift */,
+				8405FEEE2657EB1600BE833C /* ChoiceViewController.swift */,
 				8405FF0B2658300300BE833C /* ShowWeatherViewController.swift */,
 				8405FF0E2658348E00BE833C /* Extension + UIViewController.swift */,
+				8425A0E42658C97D004B8E51 /* Extension + ChoiceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				8405FF112658432700BE833C /* City.swift */,
+				8425A0E12658C3C0004B8E51 /* Forecast.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,11 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8425A0E22658C3C0004B8E51 /* Forecast.swift in Sources */,
 				8405FF0F2658348E00BE833C /* Extension + UIViewController.swift in Sources */,
-				8405FEEF2657EB1600BE833C /* ViewController.swift in Sources */,
+				8405FEEF2657EB1600BE833C /* ChoiceViewController.swift in Sources */,
 				8405FF122658432700BE833C /* City.swift in Sources */,
 				8405FEEB2657EB1600BE833C /* AppDelegate.swift in Sources */,
 				8405FF0C2658300300BE833C /* ShowWeatherViewController.swift in Sources */,
+				8425A0E52658C97D004B8E51 /* Extension + ChoiceViewController.swift in Sources */,
 				8405FEED2657EB1600BE833C /* SceneDelegate.swift in Sources */,
 				8405FF152658455100BE833C /* CityInitializer.swift in Sources */,
 			);

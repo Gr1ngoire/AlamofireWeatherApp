@@ -9,10 +9,10 @@ import UIKit
 
 extension UIViewController {
     
-    func createGradient(upperColor: UIColor, lowerColor: UIColor) {
+    func createGradient(upperColor: UIColor, lowerColor: UIColor, coordinate: NSNumber) {
         let gradient = CAGradientLayer()
         gradient.colors = [upperColor.cgColor, lowerColor.cgColor]
-        gradient.locations = [0, 1]
+        gradient.locations = [0, coordinate, 1]
         gradient.frame = view.bounds
         self.view.layer.insertSublayer(gradient, at: 0)
     }

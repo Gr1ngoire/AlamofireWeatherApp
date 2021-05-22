@@ -11,6 +11,7 @@ class CityInitializer {
     
     static let shared = CityInitializer()
     
+    
     static func giveCities() -> [City] {
         return [
             City(name: "Kyiv",
