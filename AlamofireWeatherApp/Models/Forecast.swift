@@ -26,6 +26,12 @@ struct Main: Decodable {
     var tempMax: Float?
     var pressure: Int?
     var humidity: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case feelsLike = "feels_like"
+        case tempMin = "temp_min"
+        case tempMax = "temp_max"
+    }
 }
 
 struct Wind: Decodable {
@@ -59,4 +65,21 @@ struct Forecast: Decodable {
     var id: Int?
     var name: String?
     var cod: Int?
+    
+//    enum CodingStatements: String, CodingKey {
+//        case coord = "coord"
+//        case weather = "weather"
+//        case base = "base"
+//        case main = "main"
+//        case visibility = "visibility"
+//        case wind = "wind"
+//        case clouds = "clouds"
+//        case dt = "dt"
+//        case sys  = "sys"
+//        case timezone = "timezone"
+//        case id = "id"
+//        case name = "name"
+//        case cod = "cod"
+//    }
+//    
 }

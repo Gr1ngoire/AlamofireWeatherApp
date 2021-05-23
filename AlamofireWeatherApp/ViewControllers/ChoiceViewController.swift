@@ -26,7 +26,18 @@ class ChoiceViewController: UIViewController {
         createGradient(upperColor: UIColor.systemPink, lowerColor: UIColor.purple, coordinate: 0.5)
     }
     
-
-
+    
+    @IBAction func showForecast(_ sender: Any) {
+        performSegue(withIdentifier: "dataPass", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "dataPass" {
+            guard let segue = segue.destination as? ShowWeatherViewController else { return }
+            segue.linkToPass = dataLink
+            segue.downloadData()
+        }
+    }
+    
 }
 

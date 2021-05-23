@@ -46,7 +46,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="f2v-Ap-Ulp" kind="presentation" modalPresentationStyle="fullScreen" id="kiX-CZ-8aC"/>
+                                            <action selector="showForecast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bUq-ZV-4TS"/>
+                                            <segue destination="f2v-Ap-Ulp" kind="presentation" identifier="dataPass" modalPresentationStyle="fullScreen" id="kiX-CZ-8aC"/>
                                         </connections>
                                     </button>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdY-fi-Epa">
@@ -82,10 +83,16 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3N1-LQ-ph9">
                                 <rect key="frame" x="150" y="611" width="114" height="42"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
                                 <state key="normal" title="Go back">
                                     <color key="titleColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="goBack:" destination="f2v-Ap-Ulp" eventType="touchUpInside" id="x6z-ea-zfq"/>
                                 </connections>
@@ -154,6 +161,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="Fm7-Fh-3MI" id="Hea-E1-bvZ"/>
                         <outlet property="cityName" destination="HSK-hI-OXc" id="U28-pN-b7i"/>
+                        <outlet property="dataStack" destination="E5m-yh-2WV" id="UJv-KJ-mPq"/>
                         <outlet property="temperatureStatus" destination="Om7-Dc-jFo" id="FPj-DD-TFn"/>
                         <outlet property="weatherStatus" destination="62K-WY-HAN" id="wAf-D6-yOV"/>
                     </connections>

@@ -16,7 +16,6 @@
 		8405FF0C2658300300BE833C /* ShowWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FF0B2658300300BE833C /* ShowWeatherViewController.swift */; };
 		8405FF0F2658348E00BE833C /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FF0E2658348E00BE833C /* Extension + UIViewController.swift */; };
 		8405FF122658432700BE833C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FF112658432700BE833C /* City.swift */; };
-		8405FF152658455100BE833C /* CityInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FF142658455100BE833C /* CityInitializer.swift */; };
 		8425A0E22658C3C0004B8E51 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425A0E12658C3C0004B8E51 /* Forecast.swift */; };
 		8425A0E52658C97D004B8E51 /* Extension + ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425A0E42658C97D004B8E51 /* Extension + ChoiceViewController.swift */; };
 		BDECBBF1337DCB3A170802FC /* Pods_AlamofireWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8285F17796BCAB8C6E1DA47C /* Pods_AlamofireWeatherApp.framework */; };
@@ -37,7 +36,6 @@
 		8405FF0B2658300300BE833C /* ShowWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWeatherViewController.swift; sourceTree = "<group>"; };
 		8405FF0E2658348E00BE833C /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
 		8405FF112658432700BE833C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		8405FF142658455100BE833C /* CityInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInitializer.swift; sourceTree = "<group>"; };
 		8425A0E12658C3C0004B8E51 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		8425A0E42658C97D004B8E51 /* Extension + ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + ChoiceViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,7 +133,6 @@
 				8405FEEC2657EB1600BE833C /* SceneDelegate.swift */,
 				8405FEEA2657EB1600BE833C /* AppDelegate.swift */,
 				8405FEF82657EB1900BE833C /* Info.plist */,
-				8405FF142658455100BE833C /* CityInitializer.swift */,
 			);
 			path = Adds;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 				8405FF0C2658300300BE833C /* ShowWeatherViewController.swift in Sources */,
 				8425A0E52658C97D004B8E51 /* Extension + ChoiceViewController.swift in Sources */,
 				8405FEED2657EB1600BE833C /* SceneDelegate.swift in Sources */,
-				8405FF152658455100BE833C /* CityInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +417,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832H9LUWZZ;
-				INFOPLIST_FILE = /Users/admin/Desktop/AlamofireWeatherApp/AlamofireWeatherApp/Adds/Info.plist;
+				INFOPLIST_FILE = AlamofireWeatherApp/Adds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,7 +437,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 832H9LUWZZ;
-				INFOPLIST_FILE = /Users/admin/Desktop/AlamofireWeatherApp/AlamofireWeatherApp/Adds/Info.plist;
+				INFOPLIST_FILE = AlamofireWeatherApp/Adds/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
