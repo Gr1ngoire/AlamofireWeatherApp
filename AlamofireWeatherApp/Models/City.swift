@@ -29,7 +29,7 @@ struct City {
                  code: "33"
             ),
             
-            City(name: "New-York",
+            City(name: "New York",
                  shortName: "us",
                  code: "1"
             ),

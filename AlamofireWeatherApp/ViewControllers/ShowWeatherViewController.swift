@@ -25,7 +25,7 @@ class ShowWeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinate: 0.9)
+        createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinate: 0.9, size: self.view.bounds)
         dataStack.isHidden = true
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
@@ -39,6 +39,10 @@ class ShowWeatherViewController: UIViewController {
         dataStack.isHidden = false
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super .viewWillTransition(to: size, with: coordinator)
+        createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinate: 0.9, size: self.view.bounds)
+    }
 
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true)
@@ -56,59 +60,15 @@ extension ShowWeatherViewController {
         
         let request = AF.request(url)
         
-        request.validate().responseJSON { dataResponse in
+        request.validate().responseDecodable(of: Forecast.self) {
+            dataResponse in
+            
             switch dataResponse.result {
-            case .success(let value):
+            case .success(let data):
                 
+                self.forecastData = data
+
                 
-                guard let data = value as? Dictionary<String, Any> else { return }
-
-//                for (_, value) in data {
-//                    if let trans = value as? String {
-//                        print(trans)
-//                    } else if let trans = value as? Main {
-//                        let temp = trans.temp
-//                        let feelsLike = trans.feelsLike
-//                        let tempMin = trans.tempMin
-//                        let tempMax = trans.tempMax
-//                        let pressure = trans.pressure
-//                        let humidity = trans.humidity
-//                        print(temp, feelsLike, tempMin, tempMax, pressure, humidity)
-//                    } else if let trans = value as? Float {
-//                        print(trans)
-//                    } else if let trans = value as? Clouds {
-//                        let clouds = trans.all
-//                        print(trans, clouds!)
-//                    } else if let trans = value as? [Weather] {
-//                        print(trans)
-//                    } else if let trans = value as? Sys {
-//                        print(trans)
-//                    } else if let trans = value as? Coord {
-//                        print(trans)
-//                    } else if let trans = value as? Wind {
-//                        print(trans)
-//                    } else {
-//                        print("ConvertantoImpotento")
-//                    }
-//                }
-//
-//                print("====================")
-                let forecast = Forecast(coord: data["coord"] as? Coord,
-                                        weather: data["weather"] as? [Weather],
-                                        base: data["base"] as? String,
-                                        main: data["main"] as? Main,
-                                        visibility: data["visibility"] as? Int,
-                                        wind: data["wind"] as? Wind,
-                                        clouds: data["clouds"] as? Clouds,
-                                        dt: data["dt"] as? Int,
-                                        sys: data["sys"] as? Sys,
-                                        timezone: data["timezone"] as? Int,
-                                        id: data["id"] as? Int,
-                                        name: data["name"] as? String,
-                                        cod: data["cod"] as? Int)
-
-                self.forecastData = forecast
-
             case .failure(let error):
                 print(error)
             }
@@ -120,7 +80,7 @@ extension ShowWeatherViewController {
             [self] in
             cityName.text = forecast.name ?? ""
             weatherStatus.text = forecast.weather?[0].description ?? ""
-            temperatureStatus.text = String(forecast.main?.temp ?? 0)
+            temperatureStatus.text = String(Int(forecast.main?.temp ?? 0.0) - 273)
         }
     }
 }

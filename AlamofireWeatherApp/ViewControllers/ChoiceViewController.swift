@@ -23,7 +23,7 @@ class ChoiceViewController: UIViewController {
         self.cityPicker.dataSource = self
         
         // view setup
-        createGradient(upperColor: UIColor.systemPink, lowerColor: UIColor.purple, coordinate: 0.5)
+        createGradient(upperColor: UIColor.systemPink, lowerColor: UIColor.purple, coordinate: 0.9, size: self.view.bounds)
     }
     
     

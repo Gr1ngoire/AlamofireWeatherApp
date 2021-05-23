@@ -7,19 +7,19 @@
 
 import UIKit
 
-struct Coord: Decodable {
+struct Coord: Codable {
     var lon: Float?
     var lat: Float?
 }
 
-struct  Weather: Decodable {
+struct  Weather: Codable {
     var id: Int?
     var main: String?
     var description: String?
     var icon: String?
 }
 
-struct Main: Decodable {
+struct Main: Codable {
     var temp: Float?
     var feelsLike: Float?
     var tempMin: Float?
@@ -28,13 +28,16 @@ struct Main: Decodable {
     var humidity: Int?
     
     enum CodingKeys: String, CodingKey {
+        case temp
         case feelsLike = "feels_like"
         case tempMin = "temp_min"
         case tempMax = "temp_max"
+        case pressure
+        case humidity
     }
 }
 
-struct Wind: Decodable {
+struct Wind: Codable {
     var speed: Float?
     var deg: Int?
 }
