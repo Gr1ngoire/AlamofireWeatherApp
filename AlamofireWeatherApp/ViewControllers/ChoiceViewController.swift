@@ -23,14 +23,30 @@ class ChoiceViewController: UIViewController {
         self.cityPicker.dataSource = self
         
         // view setup
-        createGradient(upperColor: UIColor.systemPink, lowerColor: UIColor.purple, coordinate: 0.9, size: self.view.bounds)
+        createGradient(upperColor: UIColor.systemPink, lowerColor: UIColor.purple, coordinates: [0, 0.6, 1], bounds: view.bounds)
     }
     
+    // attempt to solve the bug with splittig gradient
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        createGradient(upperColor: UIColor.systemPink, lowerColor: UIColor.purple, coordinates: [0, 0.6, 1], bounds: view.bounds)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        createGradient(upperColor: UIColor.systemPink, lowerColor: UIColor.purple, coordinates: [0, 0.6, 1], bounds: view.bounds)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        createGradient(upperColor: UIColor.systemPink, lowerColor: UIColor.purple, coordinates: [0, 0.6, 1], bounds: view.bounds)
+    }
     
     @IBAction func showForecast(_ sender: Any) {
         performSegue(withIdentifier: "dataPass", sender: self)
     }
     
+    // passing the info to ShowWeatherViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "dataPass" {
             guard let segue = segue.destination as? ShowWeatherViewController else { return }

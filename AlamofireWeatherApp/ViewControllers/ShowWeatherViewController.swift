@@ -25,25 +25,33 @@ class ShowWeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinate: 0.9, size: self.view.bounds)
+        // view setup
+        createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinates: [0, 0.9, 1], bounds: view.bounds)
         dataStack.isHidden = true
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
     }
     
+    // atempt to solve the bug with splitting gradient
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
+        createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinates: [0, 0.9, 1], bounds: view.bounds)
         updateData(forecast: forecastData)
         activityIndicator.stopAnimating()
         dataStack.isHidden = false
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super .viewWillTransition(to: size, with: coordinator)
-        createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinate: 0.9, size: self.view.bounds)
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinates: [0, 0.9, 1], bounds: view.bounds)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinates: [0, 0.9, 1], bounds: view.bounds)
+    }
+    
+    // goBack button action
     @IBAction func goBack(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -55,6 +63,7 @@ class ShowWeatherViewController: UIViewController {
 
 extension ShowWeatherViewController {
     
+    // download data func
     func downloadData() {
         guard let url = URL(string: linkToPass) else { return }
         
@@ -67,7 +76,7 @@ extension ShowWeatherViewController {
             case .success(let data):
                 
                 self.forecastData = data
-
+                
                 
             case .failure(let error):
                 print(error)
@@ -75,6 +84,7 @@ extension ShowWeatherViewController {
         }
     }
     
+    // upload data func
     func updateData(forecast: Forecast) {
         DispatchQueue.main.async {
             [self] in
