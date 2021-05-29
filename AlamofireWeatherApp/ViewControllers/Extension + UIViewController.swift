@@ -16,7 +16,7 @@ extension UIViewController {
         gradient.locations = coordinates
         gradient.startPoint = CGPoint(x: 0, y: 0)
         gradient.endPoint = CGPoint(x: 1, y: 1)
-        gradient.frame = view.bounds
+        gradient.frame = bounds
         self.view.layer.insertSublayer(gradient, at: 0)
     }
     

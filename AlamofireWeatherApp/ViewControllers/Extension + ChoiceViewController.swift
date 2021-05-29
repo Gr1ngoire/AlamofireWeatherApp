@@ -9,7 +9,7 @@ import UIKit
 
 extension ChoiceViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
-    // City oicker setup
+    // City picker setup
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
