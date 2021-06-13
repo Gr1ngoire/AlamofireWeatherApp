@@ -18,6 +18,8 @@
 		8405FF122658432700BE833C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FF112658432700BE833C /* City.swift */; };
 		8425A0E22658C3C0004B8E51 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425A0E12658C3C0004B8E51 /* Forecast.swift */; };
 		8425A0E52658C97D004B8E51 /* Extension + ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425A0E42658C97D004B8E51 /* Extension + ChoiceViewController.swift */; };
+		845C1F01267642CA00B83C67 /* ShortWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C1F00267642CA00B83C67 /* ShortWeather.swift */; };
+		845C1F042676494B00B83C67 /* dataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C1F032676494B00B83C67 /* dataManager.swift */; };
 		BDECBBF1337DCB3A170802FC /* Pods_AlamofireWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8285F17796BCAB8C6E1DA47C /* Pods_AlamofireWeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		8405FF112658432700BE833C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		8425A0E12658C3C0004B8E51 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		8425A0E42658C97D004B8E51 /* Extension + ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + ChoiceViewController.swift"; sourceTree = "<group>"; };
+		845C1F00267642CA00B83C67 /* ShortWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortWeather.swift; sourceTree = "<group>"; };
+		845C1F032676494B00B83C67 /* dataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				8405FF0B2658300300BE833C /* ShowWeatherViewController.swift */,
 				8405FF0E2658348E00BE833C /* Extension + UIViewController.swift */,
 				8425A0E42658C97D004B8E51 /* Extension + ChoiceViewController.swift */,
+				845C1F032676494B00B83C67 /* dataManager.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			children = (
 				8405FF112658432700BE833C /* City.swift */,
 				8425A0E12658C3C0004B8E51 /* Forecast.swift */,
+				845C1F00267642CA00B83C67 /* ShortWeather.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8425A0E22658C3C0004B8E51 /* Forecast.swift in Sources */,
+				845C1F042676494B00B83C67 /* dataManager.swift in Sources */,
 				8405FF0F2658348E00BE833C /* Extension + UIViewController.swift in Sources */,
+				845C1F01267642CA00B83C67 /* ShortWeather.swift in Sources */,
 				8405FEEF2657EB1600BE833C /* ChoiceViewController.swift in Sources */,
 				8405FF122658432700BE833C /* City.swift in Sources */,
 				8405FEEB2657EB1600BE833C /* AppDelegate.swift in Sources */,

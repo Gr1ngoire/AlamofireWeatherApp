@@ -22,8 +22,12 @@ class ShowWeatherViewController: UIViewController {
     var temp: NSNumber!
     var forecastData: Forecast!
     
+    // caching
+    var shortWeather = ShortWeather()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // view setup
         createGradient(upperColor: UIColor.systemBlue, lowerColor: UIColor.systemGreen, coordinates: [0, 0.9, 1], bounds: view.bounds)
@@ -53,6 +57,12 @@ class ShowWeatherViewController: UIViewController {
     
     // goBack button action
     @IBAction func goBack(_ sender: Any) {
+        // cahce data
+        UserDefaults.standard.set(forecastData.name, forKey: "CityName")
+        
+        shortWeather.temp = String(Int(forecastData.main?.temp ?? 0.0) - 273)
+        shortWeather.weather = forecastData.weather?[0].description ?? ""
+        DataManager.shared.saveShortWeather(shortWeather: shortWeather)
         dismiss(animated: true)
     }
     

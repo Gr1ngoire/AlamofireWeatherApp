@@ -20,4 +20,14 @@ extension UIViewController {
         self.view.layer.insertSublayer(gradient, at: 0)
     }
     
+    
+    func showAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAlert = UIAlertAction(title: "Cancel", style: .destructive)
+        
+        alert.addAction(cancelAlert)
+        present(alert, animated: true)
+    }
+    
 }

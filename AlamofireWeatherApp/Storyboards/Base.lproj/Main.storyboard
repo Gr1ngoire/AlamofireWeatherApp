@@ -55,17 +55,38 @@
                                     </pickerView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeO-68-V9X">
+                                <rect key="frame" x="104" y="471" width="206" height="28"/>
+                                <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
+                                <state key="normal" title="Show last picked city forecast">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showCahcedData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tv2-0V-IvM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hRw-sS-Lrf" firstAttribute="top" secondItem="ZeO-68-V9X" secondAttribute="bottom" constant="116.66666666666663" id="H5c-Kf-xQB"/>
                             <constraint firstItem="mtT-LI-tNQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PJU-9h-kbh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZeO-68-V9X" secondAttribute="trailing" constant="104" id="Yvp-Xp-84L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hRw-sS-Lrf" secondAttribute="bottom" constant="25.000000000000114" id="e8z-cq-csz"/>
+                            <constraint firstItem="ZeO-68-V9X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="104" id="l4f-mW-xbk"/>
+                            <constraint firstItem="ZeO-68-V9X" firstAttribute="top" relation="lessThanOrEqual" secondItem="mtT-LI-tNQ" secondAttribute="bottom" constant="125" id="ljr-Bq-7IP"/>
                             <constraint firstItem="mtT-LI-tNQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="of7-b2-x29"/>
                             <constraint firstItem="hRw-sS-Lrf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yTz-qk-DzU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cacheShowButton" destination="ZeO-68-V9X" id="TFj-xW-sNF"/>
                         <outlet property="cityPicker" destination="BdY-fi-Epa" id="hCz-jl-xvv"/>
                     </connections>
                 </viewController>
